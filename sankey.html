@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Sankey Diagram</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sankey.css">
+  
+  <!-- Load D3.js and Sankey plugin -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="bar.html">Bar Chart</a></li>
+      <li><a href="scatter.html">Scatter Plot</a></li>
+      <li><a href="line.html">Line Chart</a></li>
+      <li><a href="stacked.html">Stacked Chart</a></li>
+      <li><a href="sankey.html">Sankey Diagram</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+  </nav>
+
+  <h1>Weather Data Flow Visualization</h1>
+  <div id="weather-info"></div>
+  <div id="sankey-container"></div>
+
+  <script src="sankey.js"></script>
+</body>
+</html>
