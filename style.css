@@ -1,0 +1,153 @@
+/* General Body and Font Settings */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0ead2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Add subtle text shadow for a soft effect */
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #6c584c;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow under navigation */
+  border-bottom: 2px solid #ffcc00; /* Yellow border for emphasis */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #6c584c;
+  background-color: #ffcc00;
+  border-radius: 5px; /* Rounded corners on hover for a smooth effect */
+  transform: translateY(-2px); /* Subtle hover lift */
+}
+
+/* Chart Container Styling */
+#weather-info, #bar-chart, #scatter-chart, #line-chart, #stacked-chart {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+  height: auto;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#weather-info {
+  background-color: #dde5b6;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#stacked-bubble-chart {
+  background-color: #f9f9f9;
+}
+
+#bar-chart, #scatter-chart, #line-chart, #stacked-chart {
+  min-height: 400px;
+  position: relative;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  visibility: hidden;
+}
+
+/* Center SVG inside chart containers */
+#stacked-bubble-chart svg,
+#bar-chart svg,
+#scatter-chart svg,
+#line-chart svg,
+#stacked-chart svg {
+  display: block; /* Switch to block for perfect centering */
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#weather-info {
+  text-align: center;
+}
+
+/* Weather Info Text Styling */
+#weather-info p {
+  margin: 5px 0;
+  color: #333;
+}
+
+#weather-info strong {
+  color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  h1 {
+      font-size: 24px;
+  }
+
+  #bar-chart, #scatter-chart, #line-chart, #stacked-chart {
+      max-width: 95%;
+  }
+
+  .tooltip {
+      font-size: 12px;
+  }
+}
